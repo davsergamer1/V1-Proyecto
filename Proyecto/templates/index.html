@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página con Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Grizzlies</h1>
+    </header>
+
+    <div class="menu-bar">
+        <div class="dropdown">
+            <span>Menú</span>
+            <div class="dropdown-content">
+                {% for enlace in enlaces %}
+                    <a href="{{ enlace['url'] }}">{{ enlace['nombre'] }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <h2>¡Bienvenido, {{ nombre }}!</h2>
+        <p>Esta es una página HTML servida por Flask, un framework de Python para desarrollo web. Visita algunas secciones interesantes:</p>
+        
+        <img class="centered-image logo" src="{{ url_for('static', filename='oso.png') }}" alt="OSO">
+
+        <ul>
+            {% for enlace in enlaces %}
+                <li><a href="{{ enlace['url'] }}">{{ enlace['nombre'] }}</a></li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Página con Flask. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
