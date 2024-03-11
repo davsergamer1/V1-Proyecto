@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    position: relative;
+}
+
+
+/* Estilo para el header */
+header {
+    background-color: #958787;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-family: 'Zen Tokyo Zoo', sans-serif;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    margin-right: 10px; /* Ajusta el espaciado entre el logo y la palabra Grizzlies */
+}
+
+.menu-bar {
+    display: flex; /* Usa flexbox para alinear los elementos en una fila */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+}
+
+.menu-bar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 20px; /* Ajusta el espaciado entre elementos del menú */
+    transition: background-color 0.3s; /* Agrega transición para un cambio suave de color de fondo */
+    font-family: 'Tu Tipo de Letra Aquí', sans-serif; /* Reemplaza 'Tu Tipo de Letra Aquí' con la fuente que prefieras */
+}
+
+
+.menu-bar a:hover {
+    background-color: #4CAF50;
+    color: white; /* Ajusta el color del texto al pasar el ratón */
+}
+
+.menu-bar .dropdown {
+    position: relative;
+}
+
+.menu-bar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu-bar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-bar .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-bar .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown {
+    margin-left: 20px; /* Ajusta el espaciado entre elementos del menú */
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.user-info {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+main {
+    margin-block-start: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    inset-block-end: 0;
+    inline-size: 100%;
+    background-color: #000000;
+    color: white;
+}
+
+h1 {
+    margin: 0; /* Elimina el margen predeterminado del h1 para centrarlo completamente */
+}
+
+.welcome-message {
+    font-family: 'Tu Tipo de Letra Aquí', sans-serif; /* Reemplaza 'Tu Tipo de Letra Aquí' con la fuente que prefieras */
+    margin-right: 10px; /* O ajusta la cantidad de margen derecho según tus necesidades */
+    margin-left: 10px; /* Añade margen izquierdo para separar del menú */
+    padding: 5px; /* Añade un poco de relleno para mejorar el aspecto */
+    border: 1px solid #ccc; /* Añade un borde para destacar el mensaje */
+    border-radius: 5px; /* Añade esquinas redondeadas para un aspecto más suave */
+}
