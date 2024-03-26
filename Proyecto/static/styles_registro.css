@@ -1,0 +1,16 @@
+/* Estilos para la sección de Registro */
+.register-section .logo-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.register-section .usuario {
+    padding: 15px;
+}
+
+.register-section .usuario:hover {
+    background-color: rgba(70, 70, 70, 0.271);
+}

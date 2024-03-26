@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_login.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1 class="logo-title">
+                <a href="{{ url_for('index') }}" class="logo-link">
+                    <img class="centered-image logo" src="{{ url_for('static', filename='oso.png') }}" alt="OSO">
+                    Grizzlies
+                </a>
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <h2>Iniciar Sesión</h2>
+            <form method="POST" action="{{ url_for('iniciar_sesion') }}">
+                <label for="nombre_usuario">Nombre de Usuario:</label>
+                <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" required>
+                <input type="submit" value="Iniciar Sesión">
+            </form>
+
+            {% if error %}
+                <div class="error-message">
+                    <p>{{ error }}</p>
+                </div>
+            {% endif %}
+
+            <!-- Agregar la imagen de usuario -->
+            <a href="#" class="logo-link">
+                <div class="usuario">
+                    <img src="{{ url_for('static', filename='usuario.png') }}" width="45px" alt="huh?">
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Página con Flask. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
