@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="stylesheet" href="./static/styles_login.css">
+    <link rel="stylesheet" href="./static/styles_register.css">
+    <style>
+        /* Estilos adicionales para los botones */
+        .user-actions {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+            right: 0; /* Ajusta la posición a la derecha */
+            top: calc(100% + 10px); /* Ajusta la posición debajo del icono de usuario */
+        }
+
+        .user-actions button {
+            display: block;
+            margin-bottom: 5px;
+            padding: 8px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .user-actions button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <title>Grizzly</title>
+</head>
+<body>
+    <!-- HEADER-->
+    <div class="header">
+        <div class="leftHeader">
+            <div class="logoTittle">Grizzly</div>
+            <img src="./static/images/GRIZZLY.png" alt="Grizzly Logo" height="70px">
+        </div>
+        <div class="rightHeader">
+            <div class="lupa">
+                <img src="./static/images/LUPA.png" width="45px" alt="Search Icon">
+            </div>
+            <div class="usuario">
+                <img src="./static/images/usuario.png" width="45px" alt="User Icon" id="userIcon" onclick="toggleUserActions()">
+                <div class="user-actions" id="userActions">
+                    <button onclick="showLogin()">Iniciar Sesión</button>
+                    <button onclick="showRegister()">Registro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TARJETA DE MENUS: -->
+    <div class="card">
+        <div class="barMenu">
+            <button class="options">INICIO</button>
+            <button class="options">CUENTAS</button>
+            <button class="options">EN VIVO</button>
+        </div>
+        <div class="gameSlide">
+            <div class="gameTittle">
+                <div class="font1">CUENTAS</div>
+                <div class="font2">COD WARZONE</div>
+            </div>
+        </div>
+        <div class="barMenu"></div>
+    </div>
+
+    <!-- ESTADISTICAS DE MUESTRA: -->
+    <div class="stats">
+        <div class="statsTittle">ENCUENTRA LA CUENTA DE TU AGRADO</div>
+        <img src="./static/images/ReynaStats.png" alt="Stats Image">
+    </div>
+
+    <!-- Sección de registro -->
+    <div class="register-section">
+        <!-- Contenido de la sección de registro -->
+    </div>
+
+    <footer>
+        
+    </footer>
+
+    <script>
+        function toggleUserActions() {
+            var userActions = document.getElementById("userActions");
+            if (userActions.style.display === "block") {
+                userActions.style.display = "none";
+            } else {
+                userActions.style.display = "block";
+            }
+        }
+
+        function showLogin() {
+            // Implementa la lógica para mostrar el formulario de inicio de sesión
+            alert("No se pudo iniciar sesion");
+        }
+
+        function showRegister() {
+            // Implementa la lógica para mostrar el formulario de registro
+            alert("No se encontro formulario");
+        }
+    </script>
+</body>
+</html>

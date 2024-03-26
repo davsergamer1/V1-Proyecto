@@ -1,0 +1,18 @@
+.usuario {
+    position: relative;
+}
+
+.user-actions {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+}
+
+.usuario:hover .user-actions {
+    display: block;
+}
